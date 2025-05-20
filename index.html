@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  <header class="header">
+    <h1>IP Address Tracker</h1>
+
+    <form id="search-form" class="search-container">
+      <input
+        type="text"
+        id="ip-input"
+        class="search-input"
+        placeholder="Search for any IP address or domain"
+        aria-label="IP Address or Domain"
+      >
+      <button type="submit" class="search-button" aria-label="Search">
+        <img src="./images/icon-arrow.svg" alt="Search">
+      </button>
+    </form>
+
+    <p id="error-message" class="error-message"></p>
+  </header>
+
+  <main>
+    <section class="results-panel">
+      <div class="result-item">
+        <h2 class="result-label">IP Address</h2>
+        <p id="ip-address" class="result-value">-</p>
+      </div>
+
+      <div class="result-item">
+        <h2 class="result-label">Location</h2>
+        <p id="location" class="result-value">-</p>
+      </div>
+
+      <div class="result-item">
+        <h2 class="result-label">Timezone</h2>
+        <p id="timezone" class="result-value">-</p>
+      </div>
+
+      <div class="result-item">
+        <h2 class="result-label">ISP</h2>
+        <p id="isp" class="result-value">-</p>
+      </div>
+    </section>
+
+    <div id="map"></div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ayokanmi Adejola</a>.
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+
+  <!-- Config (contains API key) -->
+  <script src="config.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "ip-address-tracker",
+  "version": "1.0.0",
+  "description": "IP Address Tracker | Frontend Mentor Challenge - A web app that displays location information for any IP address or domain using the IPify API and LeafletJS maps.",
+  "main": "script.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": [
+    "ip-tracker",
+    "frontend-mentor",
+    "javascript",
+    "leafletjs",
+    "ipify"
+  ],
+  "author": "Ayokanmi Adejola",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

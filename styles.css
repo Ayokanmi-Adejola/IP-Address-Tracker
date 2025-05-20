@@ -1,0 +1,204 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header Styles */
+.header {
+  background-image: url('./images/pattern-bg-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 1.5rem 8rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  height: 280px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Search Form Styles */
+.search-container {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  background-color: black;
+  border: none;
+  width: 58px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: hsl(0, 0%, 17%);
+}
+
+/* Results Panel Styles */
+.results-panel {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  max-width: 1110px;
+  margin: -5rem auto 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.result-item {
+  flex: 1;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.result-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: hsl(0, 0%, 85%);
+}
+
+.result-label {
+  color: hsl(0, 0%, 59%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  color: hsl(0, 0%, 17%);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Map Container Styles */
+#map {
+  flex: 1;
+  z-index: 0;
+  height: calc(100vh - 280px);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Loading State */
+.loading .results-panel::after {
+  content: 'Loading...';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: hsl(0, 0%, 17%);
+  z-index: 3;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff3333;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Attribution Styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    background-image: url('./images/pattern-bg-mobile.png');
+    padding: 1.5rem 1.5rem 7rem;
+    height: 300px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .results-panel {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+    width: 90%;
+  }
+
+  .result-item {
+    padding: 0.75rem 0;
+  }
+
+  .result-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .result-value {
+    font-size: 1.25rem;
+  }
+
+  #map {
+    height: calc(100vh - 300px);
+  }
+}
