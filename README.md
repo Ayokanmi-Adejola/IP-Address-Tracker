@@ -107,8 +107,3 @@ For a more secure approach using environment variables:
    ```
 
 Note: This is a simple demonstration. In a real project, you would use a proper bundler like Webpack, Parcel, or Vite.
-
-
-## Author
-
-- Frontend Mentor - [@Ayokanmi-Adejola](https://www.frontendmentor.io/profile/Ayokanmi-Adejola)
