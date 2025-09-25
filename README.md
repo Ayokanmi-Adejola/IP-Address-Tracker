@@ -2,7 +2,7 @@
 
 This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-
+![Desktop Design](./design/desktop-preview.jpg)
 
 ## Overview
 
@@ -15,9 +15,10 @@ Users should be able to:
 - See their own IP address on the map on the initial page load
 - Search for any IP addresses or domains and see the key information and location
 
-### Screenshot
 
-![Desktop Design](./design/desktop-preview.jpg)
+| Desktop View | Mobile View |
+| ------- | ------ |
+|<img width="1440" height="800" alt="image" src="https://github.com/user-attachments/assets/0d939662-e28c-4df5-8627-699e86f369da" />| <img width="375" height="828" alt="image" src="https://github.com/user-attachments/assets/5c15404f-ed00-47fd-ad95-712be458579f" />|
 
 
 ## My process
@@ -105,5 +106,3 @@ For a more secure approach using environment variables:
    ```html
    <script src="script.build.js"></script>
    ```
-
-Note: This is a simple demonstration. In a real project, you would use a proper bundler like Webpack, Parcel, or Vite.
